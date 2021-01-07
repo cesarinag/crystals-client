@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>crystal space app</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,44 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+      <h1>crystal space</h1>
+
+
+<p id="message"></p>
+
+<!-- unauthenticated elements -->
+<div class="unauthenticated">
+  <!-- user sign up -->
+<form id="sign-up">
+<input type="text" name="credentials[email]" placeholder="Please enter your email"/>
+<input type="password" name="credentials[password]" placeholder="Please enter password" />
+<input type="password" name="credentials[password_confirmation]" placeholder="Please confirm password" />
+<button type="submit">Sign Up</button>
+</form>
+<!-- user sign in -->
+<form id="sign-in">
+<input type="text" name="credentials[email]" placeholder="Please enter email"/>
+<input type="password" name="credentials[password]" placeholder="Please enter password here"/>
+<button type="submit">Sign In</button>
+</form>
+</div>
+<!-- authenticated elements -->
+<div class="authenticated">
+  <!-- change user password -->
+<form id="change-password">
+<input type="password" name="passwords[old]" placeholder="old password" />
+<input type="password" name="passwords[new]" placeholder="new password" />
+<button type="submit">my word is my bond</button>
+</form>
+<!-- user sign out -->
+<button id="sign-out">let me out</button>
+<!-- display crystals  -->
+<div class="game-display"></div>
+<!-- crytal create  -->
+<button id="create-crystals" type="button">crystalize me</button>
+<!-- get all crystals button -->
+<button id="get-crystals" type="button">summon all crystals</button>
+</div>
+</body>
+</html>
 </html>
