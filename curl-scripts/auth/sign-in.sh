@@ -1,4 +1,4 @@
-curl "http://localhost:4741/sign-in" \
+curl "https://arcane-meadow-00738.herokuapp.com/sign-in" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

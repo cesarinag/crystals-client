@@ -1,4 +1,4 @@
-curl "http://localhost:4741/change-password" \
+curl "https://arcane-meadow-00738.herokuapp.com/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \

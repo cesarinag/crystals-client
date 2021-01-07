@@ -1,4 +1,4 @@
-curl "http://localhost:4741/sign-out" \
+curl "https://arcane-meadow-00738.herokuapp.com/sign-out" \
   --include \
   --request DELETE \
   --header "Content-Type: application/jason" \
