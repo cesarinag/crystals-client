@@ -43,35 +43,44 @@
 </form>
 <!-- user sign out -->
 <button id="sign-out">let me out</button>
-<!-- display crystals  -->
-<button id="crystals-index" type="submit">summon all crystals </button>
+<!-- index crystals  -->
+<button id="index-crystals" type="button">summon all crystals </button>
 <!-- find one plant  -->
 <form id="show-crystal">
   <input type="text" name="crystal[id]" placeholder="let me get ur number" />
-  <button type="submit">find me one</button>
+  <br>
+  <button type="button">find me one</button>
 </form>
 <!-- crytal create  -->
 <form id="create-crystal">
   <input type="text" name="crystal[name]" placeholder="name" />
   <input type="text" name="crystal[chakra]" placeholder="chakra" />
+  <br>
   <input type="text" name="crystal[indigenousTo]" placeholder="found where?" />
   <input type="text" name="crystal[ritualUse]" placeholder="suggested use" />
+  <br>
   <button type="submit"> create me one </button>
 </form>
 <!-- update crystal  -->
 <form id="update-crystal">
   <input type="text" name="credentials[id]" placeholder="crystal id" />
+  <br>
   <input type="text" name="crystal[name]" placeholder="name" />
   <input type="text" name="crystal[chakra]" placeholder="chakra" />
+  <br>
   <input type="text" name="crystal[indigenousTo]" placeholder="found where?" />
   <input type="text" name="crystal[ritualUse]" placeholder="suggested use" />
+  <br>
   <button type="button"> update me one </button>
 </form>
 <!-- delete crystal -->
 <form id="delete-crystal">
   <input type="text" name="credentials[id]" placeholder="crystal id" />
+  <br>
   <button type="button"> delete me one </button>
 </form>
+<!-- display crystals div  -->
+<div id="crystals-display"></div>
 </div>
 
 </body>
