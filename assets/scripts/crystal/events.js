@@ -9,7 +9,7 @@ const store = require('./../store')
 const onCreateCrystal = function(event) {
   event.preventDefault()
   const crystalData = getFormFields(event.target)
-  console.log(crystalData)
+  // console.log(crystalData)
   api.createCrystal(crystalData)
   .then(ui.createCrystalSuccess)
   .catch(ui.createCrystalFailure)
@@ -32,8 +32,8 @@ const onShowCrystal = function (event) {
   const form = event.target
   const crystalData = getFormFields(form)
   const crystalId = crystalData.crystal._id
-  console.log(crystalId)
-  console.log(crystalData)
+  // console.log(crystalId)
+  // console.log(crystalData)
   api.showCrystal(crystalId)
   .then(ui.showCrystalSuccess)
   .catch(ui.showCrystalFailure)
@@ -42,18 +42,45 @@ const onShowCrystal = function (event) {
 // update crystal
 const onUpdateCrystal = function (event) {
   event.preventDefault()
-  const crystalData = getFormFields(form).crystal
-  const crystalId = crystalData.id
+  const form = event.target
+  const crystalData = getFormFields(form)
+  const crystalId = crystalData.crystal._id
   // console.log(crystalData + `is crystalData`)
-  // console.log(crystalData + `is crystalId`)
-  api.updateCrystal(crystalId, crystalData)
+  // console.log(crystalId + `is crystalId`)
+  api.updateCrystal(crystalData)
   .then(ui.updateCrystalSuccess)
   .catch(ui.updateCrystalFailure)
 }
+
+
+// // delete crystal
+// const onDeleteCrystal = function (event) {
+//   event.preventDefault()
+//   console.log('Deleted', event.target)
+//   const form = event.target
+//   const crystalData = getFormFields(form)
+//   api.deleteCrystal(crystalData)
+//   .then(ui.deleteCrystalSuccess)
+//   .catch(ui.deleteCrystalFailure)
+// }
+
+const onDeleteCrystal = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const crystalData = getFormFields(form)
+  const crystalId = crystalData.crystal._id
+  // console.log(crystalId)
+  // console.log(crystalData)
+  api.deleteCrystal(crystalId)
+  .then(ui.deleteCrystalSuccess)
+  .catch(ui.deleteCrystalFailure)
+}
+
 
 module.exports = {
   onCreateCrystal,
   onIndexCrystal,
   onShowCrystal,
-  onUpdateCrystal
+  onUpdateCrystal,
+  onDeleteCrystal
 }

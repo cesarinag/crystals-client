@@ -26,5 +26,6 @@ $(() => {
   $('#create-crystal').on('submit', crystalEvents.onCreateCrystal)
   $('#index-crystals').on('click', crystalEvents.onIndexCrystal)
   $('#show-crystal').on('submit', crystalEvents.onShowCrystal)
-  $('#update-crystal').on('click', crystalEvents.onUpdateCrystal)
+  $('#update-crystal').on('submit', crystalEvents.onUpdateCrystal)
+  $('#delete-crystal').on('submit', crystalEvents.onDeleteCrystal)
 })

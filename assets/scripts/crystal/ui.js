@@ -32,9 +32,10 @@ const indexCrystalSuccess = function (response) {
   store.crystal = response.crystal
   // console.log(store.crystal)
   const currentCrystal = store.crystal
-  console.log(store.crystal)
+  const reverseCrystalIndex = currentCrystal.reverse()
+  // console.log(store.crystal)
   let crystalHTML = ''
-  currentCrystal.forEach(function (crystal) {
+  reverseCrystalIndex.forEach(function (crystal) {
     const currentCrystalHTML = (`
       <div>Name: ${crystal.name}</div>
       <ul>
@@ -59,7 +60,7 @@ const indexCrystalFailure = function (error) {
 
 // show crystal sucess
 const showCrystalSuccess = function (response) {
-  console.log(response)
+  // console.log(response)
   store.crystal = response.crystal
   const currentCrystal = store.crystal
   // console.log(currentCrystal)
@@ -67,7 +68,7 @@ const showCrystalSuccess = function (response) {
     const crystalShowHTML = (`
       <div>Name: ${currentCrystal.name}</div>
       <ul>
-      <li>Crystal ID: ${currentCrystal.id}</li>
+      <li>Crystal ID: ${currentCrystal._id}</li>
       <li>Chakra: ${currentCrystal.chakra}</li>
       <li>Indigenous To: ${currentCrystal.indigenousTo}</li>
       <li>Suggested Use: ${currentCrystal.ritualUse}</li>
@@ -87,17 +88,19 @@ const showCrystalFailure = function (error) {
 
 // update crystal success
 const updateCrystalSuccess = function (response) {
+  // console.log(response)
   store.crystal = response.crystal
+  // console.log(store.crystal)
   const currentCrystal = store.crystal
-  console.log(currentCrystal)
+  // console.log(currentCrystal)
   let crystalHTML = ''
     const crystalUpdateHTML = (`
-      <div>Name: ${crystal.name}</div>
+      <div>Name: ${currentCrystal.name}</div>
       <ul>
-      <li>Crystal ID: ${crystal._id}</li>
-      <li>Chakra: ${crystal.chakra}</li>
-      <li>Indigenous To: ${crystal.indigenousTo}</li>
-      <li>Suggested Use: ${crystal.ritualUse}</li>
+      <li>Crystal ID: ${currentCrystal._id}</li>
+      <li>Chakra: ${currentCrystal.chakra}</li>
+      <li>Indigenous To: ${currentCrystal.indigenousTo}</li>
+      <li>Suggested Use: ${currentCrystal.ritualUse}</li>
       </ul>
       `)
       crystalHTML += crystalUpdateHTML
@@ -111,11 +114,32 @@ const updateCrystalFailure = function (error) {
   $('#message').text('cant update ' + error.responseJSON.message)
 }
 
+// delete crystal success
+const deleteCrystalSuccess = function () {
+  const crystalHTML = (`
+    <div>
+    <h2> crystal is gone!</h2>
+    </div>
+    `)
+    $('#message').text('crystal has been deleted')
+    $('#crystals-display').html(crystalHTML)
+    $('form').trigger('reset')
+}
+
+
+const deleteCrystalFailure = function (error) {
+  $('#message').text('cant delete' + error.responseJSON.message)
+}
+
 module.exports = {
   createCrystalSuccess,
   createCrystalFailure,
   indexCrystalSuccess,
   indexCrystalFailure,
   showCrystalSuccess,
-  showCrystalFailure
+  showCrystalFailure,
+  updateCrystalSuccess,
+  updateCrystalFailure,
+  deleteCrystalSuccess,
+  deleteCrystalFailure
 }

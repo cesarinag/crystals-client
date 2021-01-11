@@ -64,7 +64,7 @@
 </form><br>
 <!-- update crystal  -->
 <form id="update-crystal" class="authenticated-forms">
-  <input type="text" name="credentials[id]" placeholder="crystal id" />
+  <input type="text" name="crystal[_id]" placeholder="crystal id" />
   <br>
   <input type="text" name="crystal[name]" placeholder="name" />
   <input type="text" name="crystal[chakra]" placeholder="chakra" />
@@ -72,13 +72,13 @@
   <input type="text" name="crystal[indigenousTo]" placeholder="found where?" />
   <input type="text" name="crystal[ritualUse]" placeholder="suggested use" />
   <br>
-  <button type="button"> update me one </button>
+  <button type="submit"> update me one </button>
 </form><br>
 <!-- delete crystal -->
 <form id="delete-crystal" class="authenticated-forms">
-  <input type="text" name="credentials[id]" placeholder="crystal id" />
+  <input type="text" name="crystal[_id]" placeholder="crystal id" />
   <br>
-  <button type="button"> delete me one </button>
+  <button type="submit"> delete me one </button>
 </form><br>
 <!-- display crystals div  -->
 <div id="crystals-display"></div>
