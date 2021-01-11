@@ -30,14 +30,16 @@ const indexCrystal = function (crystalData) {
 
 
 // SHOW crystal
-const showCrystal = function (crystalData) {
+const showCrystal = function (crystalId) {
+  console.log('showCrystal function ran')
+  // console.log(crystalData)
+  console.log('id is ', crystalId)
   return $.ajax({
-    url: config.apiUrl + '/crystal/' + crystalData.crystal.id,
+    url: config.apiUrl + '/crystals/' + crystalId,
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    },
-    data: crystalData
+    }
   })
 }
 

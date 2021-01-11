@@ -32,6 +32,7 @@ const indexCrystalSuccess = function (response) {
   store.crystal = response.crystal
   // console.log(store.crystal)
   const currentCrystal = store.crystal
+  console.log(store.crystal)
   let crystalHTML = ''
   currentCrystal.forEach(function (crystal) {
     const currentCrystalHTML = (`
@@ -58,17 +59,18 @@ const indexCrystalFailure = function (error) {
 
 // show crystal sucess
 const showCrystalSuccess = function (response) {
+  console.log(response)
   store.crystal = response.crystal
   const currentCrystal = store.crystal
-  console.log(currentCrystal)
+  // console.log(currentCrystal)
   let crystalHTML = ''
     const crystalShowHTML = (`
-      <div>Name: ${crystal.name}</div>
+      <div>Name: ${currentCrystal.name}</div>
       <ul>
-      <li>Crystal ID: ${crystal._id}</li>
-      <li>Chakra: ${crystal.chakra}</li>
-      <li>Indigenous To: ${crystal.indigenousTo}</li>
-      <li>Suggested Use: ${crystal.ritualUse}</li>
+      <li>Crystal ID: ${currentCrystal.id}</li>
+      <li>Chakra: ${currentCrystal.chakra}</li>
+      <li>Indigenous To: ${currentCrystal.indigenousTo}</li>
+      <li>Suggested Use: ${currentCrystal.ritualUse}</li>
       </ul>
     `)
     crystalHTML += crystalShowHTML
@@ -114,6 +116,6 @@ module.exports = {
   createCrystalFailure,
   indexCrystalSuccess,
   indexCrystalFailure,
-  updateCrystalSuccess,
-  updateCrystalFailure
+  showCrystalSuccess,
+  showCrystalFailure
 }

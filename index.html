@@ -12,47 +12,48 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>crystal space</h1>
-
+      <h1>welcome to <br> crystal space.</h1>
+      <!-- <h2> a database for your crystals</h2> -->
 
 <p id="message"></p>
 
 <!-- unauthenticated elements -->
 <div class="unauthenticated">
+  <!-- <br><br><br> -->
   <!-- user sign up -->
-<form id="sign-up">
-<input type="text" name="credentials[email]" placeholder="Please enter your email"/>
-<input type="password" name="credentials[password]" placeholder="Please enter password" />
-<input type="password" name="credentials[password_confirmation]" placeholder="Please confirm password" />
-<button type="submit">Sign Up</button>
-</form>
+<form id="sign-up" class="unauthenticated-forms">
+<input type="email" name="credentials[email]" placeholder="email"/>
+<input type="password" name="credentials[password]" placeholder="password" />
+<input type="password" name="credentials[password_confirmation]" placeholder="confirm password" />
+<button type="submit">sign up</button>
+</form><br>
 <!-- user sign in -->
-<form id="sign-in">
-<input type="text" name="credentials[email]" placeholder="Please enter email"/>
-<input type="password" name="credentials[password]" placeholder="Please enter password here"/>
-<button type="submit">Sign In</button>
-</form>
+<form id="sign-in" class="unauthenticated-forms">
+<input type="email" name="credentials[email]" placeholder="email"/>
+<input type="password" name="credentials[password]" placeholder="password"/>
+<button type="submit">sign in</button>
+</form><br>
 </div>
 <!-- authenticated elements -->
 <div class="authenticated">
   <!-- change user password -->
-<form id="change-password">
+<form id="change-password" class="authenticated-forms">
 <input type="password" name="passwords[old]" placeholder="old password" />
 <input type="password" name="passwords[new]" placeholder="new password" />
 <button type="submit">my word is my bond</button>
-</form>
+</form><br>
 <!-- user sign out -->
-<button id="sign-out">let me out</button>
+<button id="sign-out" class="authenticated-forms" >let me out</button><br><br>
 <!-- index crystals  -->
-<button id="index-crystals" type="button">summon all crystals </button>
+<button id="index-crystals" class="authenticated-forms" type="button">summon all crystals </button><br>
 <!-- find one plant  -->
-<form id="show-crystal">
-  <input type="text" name="crystal[id]" placeholder="let me get ur number" />
+<form id="show-crystal" class="authenticated-tings">
+  <input type="text" name="crystal[_id]" placeholder="let me get ur number" />
   <br>
-  <button type="button">find me one</button>
-</form>
+  <button type="submit" class="authenticated-forms">find me one</button>
+</form><br>
 <!-- crytal create  -->
-<form id="create-crystal">
+<form id="create-crystal" class="authenticated-forms">
   <input type="text" name="crystal[name]" placeholder="name" />
   <input type="text" name="crystal[chakra]" placeholder="chakra" />
   <br>
@@ -60,9 +61,9 @@
   <input type="text" name="crystal[ritualUse]" placeholder="suggested use" />
   <br>
   <button type="submit"> create me one </button>
-</form>
+</form><br>
 <!-- update crystal  -->
-<form id="update-crystal">
+<form id="update-crystal" class="authenticated-forms">
   <input type="text" name="credentials[id]" placeholder="crystal id" />
   <br>
   <input type="text" name="crystal[name]" placeholder="name" />
@@ -72,13 +73,13 @@
   <input type="text" name="crystal[ritualUse]" placeholder="suggested use" />
   <br>
   <button type="button"> update me one </button>
-</form>
+</form><br>
 <!-- delete crystal -->
-<form id="delete-crystal">
+<form id="delete-crystal" class="authenticated-forms">
   <input type="text" name="credentials[id]" placeholder="crystal id" />
   <br>
   <button type="button"> delete me one </button>
-</form>
+</form><br>
 <!-- display crystals div  -->
 <div id="crystals-display"></div>
 </div>
