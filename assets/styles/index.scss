@@ -21,9 +21,10 @@ body {
 .h1 {
   font-size: 30px;
 }
-.h2 {
-  position: relative;
-  box-sizing: border-box;
+
+.welcome {
+  display: flex;
+  flex-direction: column;
 }
 
 .unauthenticated-forms {
@@ -43,7 +44,7 @@ body {
   padding: 10px;
   font-size: 18px;
   font-family: 'Cormorant', serif;
-  // font-weight: 100;
+  font-weight: 100;
 }
 
 .unauthenticated-forms input[type="email"] {

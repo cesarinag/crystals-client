@@ -12,8 +12,10 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <div class="welcome">
       <h1>welcome to <br> crystal space.</h1>
-      <!-- <h2> a database for your crystals</h2> -->
+    <h6><center> a database for your crystals</center></h6>
+  </div>
 
 <p id="message"></p>
 
@@ -42,16 +44,6 @@
 <input type="password" name="passwords[new]" placeholder="new password" />
 <button type="submit">my word is my bond</button>
 </form><br>
-<!-- user sign out -->
-<button id="sign-out" class="authenticated-forms" >let me out</button><br><br>
-<!-- index crystals  -->
-<button id="index-crystals" class="authenticated-forms" type="button">summon all crystals </button><br>
-<!-- find one plant  -->
-<form id="show-crystal" class="authenticated-tings">
-  <input type="text" name="crystal[_id]" placeholder="let me get ur number" />
-  <br>
-  <button type="submit" class="authenticated-forms">find me one</button>
-</form><br>
 <!-- crytal create  -->
 <form id="create-crystal" class="authenticated-forms">
   <input type="text" name="crystal[name]" placeholder="name" />
@@ -61,6 +53,14 @@
   <input type="text" name="crystal[ritualUse]" placeholder="suggested use" />
   <br>
   <button type="submit"> create me one </button>
+</form><br>
+<!-- index crystals  -->
+<button id="index-crystals" class="authenticated-forms" type="button">summon all crystals </button><br>
+<!-- find one plant  -->
+<form id="show-crystal" class="authenticated-tings">
+  <input type="text" name="crystal[_id]" placeholder="let me get ur number" />
+  <br>
+  <button type="submit" class="authenticated-forms">find me one</button>
 </form><br>
 <!-- update crystal  -->
 <form id="update-crystal" class="authenticated-forms">
@@ -80,6 +80,8 @@
   <br>
   <button type="submit"> delete me one </button>
 </form><br>
+<!-- user sign out -->
+<button id="sign-out" class="authenticated-forms" >let me out</button><br><br>
 <!-- display crystals div  -->
 <div id="crystals-display"></div>
 </div>
