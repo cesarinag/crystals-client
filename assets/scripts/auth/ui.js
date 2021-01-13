@@ -58,7 +58,7 @@ $('.unauthenticated').hide()
 }
 
 // change password failure .catch function
-const changePasswordFailure = function (response) {
+const changePasswordFailure = function (error) {
   $('#message').text('It no work compadre ' + error.responseJSON.message)
 }
 
