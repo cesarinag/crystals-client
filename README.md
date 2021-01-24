@@ -1,4 +1,3 @@
-<!-- this is my empty readme but eventually i'll place my user stories and things like that here  -->
 # crystals-client : A Description
 #### This application allows the user to create an account, login and perform CRUD actions on their crystal database.
 
@@ -42,4 +41,4 @@
 * I'd like to play add another resource so users can add reviews or comment on other user's rituals
 
 ## Wireframes:
-![initial wireframe for tic-tac-toe game](./pictures/project2_wireframe.jpg)
+![initial wireframe for crystal space](./pictures/project2_wireframe.jpg)
